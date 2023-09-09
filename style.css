@@ -52,6 +52,8 @@ body {
 .grid {
     height: 100%;
     width: 100%;
+    opacity: 1;
+    cursor: crosshair;
 }
 
 .menu {
@@ -93,7 +95,7 @@ body {
     appearance: none;
     height: 0.6rem;
     border-radius: 9px;
-    background-color: #d79921;
+    background-color: rgb(216, 155, 34);
 }
 
 .slider::-webkit-slider-thumb,

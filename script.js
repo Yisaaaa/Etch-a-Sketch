@@ -4,6 +4,7 @@ const sliderValElement = document.querySelector(".slider-value");
 const colorPickerElement = document.querySelector(".color-picker");
 const clearBtnElement = document.querySelector(".btn--clear");
 const randomBtnelement = document.querySelector(".btn--random");
+const eraserBtnElement = document.querySelector(".btn--eraser");
 
 let color = "#000";
 let mouseDown = false;
@@ -35,6 +36,10 @@ randomBtnelement.addEventListener("click", () => {
     updateBtnSelected(randomBtnelement);
 });
 
+eraserBtnElement.addEventListener("click", () => {
+    updateBtnSelected(eraserBtnElement);
+});
+
 // Generates NxN grid
 function generateGrids(N) {
     const totalN = N * N;
@@ -58,9 +63,11 @@ function fillGrid(e) {
     if (btnSelected === randomBtnelement) {
         const rgb = generateRandomColor();
         e.target.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
-        return;
+    } else if (btnSelected === eraserBtnElement) {
+        e.target.style.backgroundColor = "#fff";
+    } else {
+        e.target.style.backgroundColor = color;
     }
-    e.target.style.backgroundColor = color;
 }
 
 function displaySliderValue() {
@@ -90,7 +97,7 @@ function updateBtnSelected(btn) {
             return;
         }
     }
-    btnSelected = randomBtnelement;
+    btnSelected = btn;
     btnSelected.classList.add("selected");
 }
 
