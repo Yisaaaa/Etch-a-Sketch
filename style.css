@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-    padding: 2.8rem;
+    padding: 4rem;
 }
 
 .header-text {
@@ -74,6 +74,13 @@ body {
     font-weight: 500;
     cursor: pointer;
     border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    transition: padding none;
+}
+
+.btn:hover {
+    background-color: #d79921;
+    transform: scale(1.05);
 }
 
 .color-picker {
