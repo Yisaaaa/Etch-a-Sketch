@@ -74,13 +74,15 @@ body {
     font-weight: 500;
     cursor: pointer;
     border-radius: 2px;
-    transition: all 0.2s ease-in-out;
-    transition: padding none;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .btn:hover {
     background-color: #d79921;
-    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #cc241d;
 }
 
 .color-picker {
