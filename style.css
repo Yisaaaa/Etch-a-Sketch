@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 html,
 body {
     height: 100%;
@@ -27,6 +31,11 @@ body {
 }
 
 .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+    align-items: center;
+    gap: 9.6rem;
     margin-left: 9.6rem;
 }
 
@@ -40,4 +49,13 @@ body {
 .grid {
     height: 100%;
     width: 100%;
+}
+
+.menu {
+    justify-self: start;
+}
+
+.slider-value {
+    font-size: 1.8rem;
+    text-align: center;
 }
