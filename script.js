@@ -1,6 +1,8 @@
 const grids = document.querySelector(".grids");
 const sliderElement = document.querySelector(".slider");
 const sliderValElement = document.querySelector(".slider-value");
+const colorPickerElement = document.querySelector(".color-picker");
+const clearBtnElement = document.querySelector(".btn--clear");
 
 let color = "#000";
 let mouseDown = false;
@@ -14,9 +16,17 @@ document.body.onmouseup = (e) => {
 
 sliderElement.addEventListener("input", () => {
     displaySliderValue();
-    numberOfGrid = sliderElement.value;
-    grids.innerHTML = "";
-    generateGrids(numberOfGrid);
+    clearGrid();
+    generateGrids(sliderElement.value);
+});
+
+clearBtnElement.addEventListener("click", () => {
+    clearGrid();
+    generateGrids(sliderElement.value);
+});
+
+colorPickerElement.addEventListener("input", (e) => {
+    color = e.target.value;
 });
 
 // Generates NxN grid
@@ -40,6 +50,11 @@ function generateGrids(N) {
 
 function displaySliderValue() {
     sliderValElement.textContent = `${sliderElement.value}`;
+}
+
+function clearGrid() {
+    grids.innerHTML = "";
+    console.log("cleared");
 }
 
 displaySliderValue();
