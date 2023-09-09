@@ -2,7 +2,7 @@
 
 ## From The Odin Project
 
-This is a simple rock and paper scissors game from [The Odin Project](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
+This is a project from [The Odin Project](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
 
 ### Technology used
 
