@@ -15,3 +15,5 @@ This is a project from [The Odin Project](https://www.theodinproject.com/lessons
 -   Deepened my knowledge of the **DOM**.
 -   Practiced my skills on different **events**.
 -   Another fun and awesome project from Odin project.
+
+#### See live preview [here](https://yisaaaa.github.io/Etch-a-Sketch/)
